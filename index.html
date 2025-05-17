@@ -1,55 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Portfolio of Veda Prakash Chiliveru — Machine Learning Engineer | Data Scientist | Developer">
+<meta name="keywords" content="Machine Learning, Data Science, Portfolio, Veda Prakash, React, Python, SQL, AI">
+<meta name="author" content="Veda Prakash Chiliveru">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veda Prakash Chiliveru Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
 </head>
 <body>
 
-  <header>
-    <nav>
-      <h1>Your Name</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 🔥 Smoke GIF Background -->
+  <div class="background-smoke"></div>
 
-  <section id="hero">
-    <h2>Hello, I'm [Your Name]</h2>
-    <p>I'm an aspiring [Your Role, e.g. Web Developer / Data Analyst]</p>
-  </section>
+  <!-- 🌐 Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#education">EDUCATION</a></li>
+      <li><a href="#workshops">WORKSHOPS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Short intro about who you are and what you're learning.</p>
-  </section>
+  <!-- 🏠 Home Section -->
+  <div id="home" class="container">
+    <div class="left">
+      <h1>Hi, I'm Veda Prakash Chiliveru</h1>
+      <h3>Machine Learning Engineer | Data Enthusiast | Developer</h3>
+      <p>
+        I’m a passionate ML engineer with hands-on experience in Python, SQL, and cloud technologies.
+        Currently pursuing my MS in Data Science at the University of New Haven and previously interned at Kore.ai.
+      </p>
+      <a href="Resume_Chiliveru_Veda_Prakash.pdf" class="btn" download>Download Resume</a>
+<a href="https://www.credly.com/users/chiliveru-veda-prakash" class="btn" target="_blank" style="margin-left: 10px;">View My Credly Badges</a>
+    </div>
+    <div class="right">
+      <img src="images/profile.jpg" alt="Your Photo" style="width:300px; height:auto; object-fit:cover;" />
 
-  <section id="projects">
+    </div>
+  </div>
+
+  <!-- 🛠️ Projects Section -->
+  <section id="projects" class="container">
     <h2>Projects</h2>
-    <!-- Add project cards here -->
+    <div class="projects-grid">
+      <!-- RAG System -->
+      <div class="project-card" onclick="openModal('loanModal')">
+        <h3>Automated Resume Screening using RAG</h3>
+        <p>RAG-based resume screening system leveraging FAISS, Sentence-BERT, and LLMs (Flan-T5) to automate candidate evaluation, demonstrating improved Recall@5/Precision@5 across 10 job domains.</p>
+      </div>
+
+      <!--  -->
+      <div class="project-card" onclick="openModal('resumeModal')">
+        <h3>Leveraging AWS for Food Market Predictive analytics</h3>
+        <p>Leveraging ML and time-series analysis, this project predicts food demand to optimize inventory, reduce waste, and enhance supply chain sustainability in the food industry.</p>
+      </div>
+
+      <!-- Triplet Navigation -->
+      <div class="project-card" onclick="openModal('tripletModal')">
+        <h3>Fraudulent Transaction Detection in Financial Systems using ML</h3>
+        <p>Developing machine learning models to detect fraudulent transactions by analyzing transaction patterns, enhancing real-time fraud prediction and financial security</p>
+      </div>
+    </div>
+
+    <!-- 💡 Project Modals -->
+    <div id="loanModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('loanModal')">&times;</span>
+    <h2>Automated Resume Screening using RAG</h2>
+    <p>RAG-based system for automating resume screening...</p>
+    
+    <div class="modal-image-grid">
+      <img src="images/proj1/img1.png" alt="Screenshot 1">
+      <img src="images/proj1/img2.png" alt="Screenshot 2">
+      <img src="images/proj1/img3.png" alt="Screenshot 3">
+      <img src="images/proj1/img4.png" alt="Screenshot 4">
+      <img src="images/proj1/img5.png" alt="Screenshot 5">
+      <img src="images/proj1/img6.png" alt="Screenshot 6">
+    </div>
+  </div> <!-- ✅ Close modal-content -->
+</div> <!-- ✅ Close modal-overlay -->
+
+
+
+    <div id="resumeModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('resumeModal')">&times;</span>
+        <h2>Leveraging AWS for Food Market Predictive analytics</h2>
+        <p>This project develops a machine learning system combining time-series analysis and classification to predict food demand, enabling optimized inventory decisions and reduced waste. Using historical data on pricing, cuisine, and demand patterns, it transforms complex supply chain data into actionable insights for a more sustainable and efficient food industry.</p>
+        <div class="modal-image-grid">
+      <img src="images/proj2/img1.png" alt="Screenshot 1">
+      <img src="images/proj2/img2.png" alt="Screenshot 2">
+      <img src="images/proj2/img3.png" alt="Screenshot 3">
+      <img src="images/proj2/img4.png" alt="Screenshot 4">
+      <img src="images/proj2/img5.png" alt="Screenshot 5">
+      <img src="images/proj2/img6.png" alt="Screenshot 6">
+    </div>
+      </div>
+    </div>
+
+    <div id="tripletModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('tripletModal')">&times;</span>
+        <h2>Fraudulent Transaction Detection in Financial Systems using ML</h2>
+        <p>Developing ML classification models to detect fraudulent transactions by analyzing key patterns in financial data, aiming to enhance real-time fraud prediction and security measure evaluation using transaction records from Kaggle.</p>
+<div class="modal-image-grid">
+      <img src="images/proj3/img1.png" alt="Screenshot 1">
+      <img src="images/proj3/img2.png" alt="Screenshot 2">
+      <img src="images/proj3/img3.png" alt="Screenshot 3">
+      <img src="images/proj3/img4.png" alt="Screenshot 4">
+      <img src="images/proj3/img5.png" alt="Screenshot 5">
+      <img src="images/proj3/img6.png" alt="Screenshot 6">
+    </div>      </div>
+    </div>
   </section>
 
+  <!-- 💡 Skills Section -->
   <section id="skills">
-    <h2>Skills</h2>
-    <!-- List or icons of your skills -->
+  <div class="skills-container">
+    <!-- Left Side -->
+    <div class="skills-left">
+      <h2>Skills</h2>
+      <p>
+        Here's a curated collection of my technical skills across Data Science, Web Development,
+        and Engineering. From machine learning to frontend frameworks, these are the tools I use to build and solve.
+      </p>
+    </div>
+
+    <!-- Right Side -->
+    <div class="skills-right honeycomb">
+      <!-- Row 1 -->
+      <div class="hex-row">
+        <div class="hex"><img src="images/ML.png" alt="Machine Learning" title="Machine Learning" /></div>
+        <div class="hex"><img src="images/DC.png" alt="Data Cleaning" title="Data Cleaning" /></div>
+        <div class="hex"><img src="images/DL.png" alt="Deep Learning" title="Deep Learning" /></div>
+        <div class="hex"><img src="images/DV.png" alt="Data Visualization" title="Data Visualization" /></div>
+        <div class="hex"><img src="images/NLP.png" alt="Natural Language Processing" title="Natural Language Processing" /></div>
+
+      </div>
+
+      <!-- Row 2 -->
+      <div class="hex-row offset">
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" /></div>
+        <div class="hex" title="Power BI">
+  <svg viewBox="0 0 24 24" fill="#F2C811" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.293 2.322a1.528 1.528 0 0 0-1.527 0L2.322 10.215a1.528 1.528 0 0 0 0 2.645l13.444 7.892a1.528 1.528 0 0 0 1.527 0l13.444-7.892a1.528 1.528 0 0 0 0-2.645L17.293 2.322Z"/>
+  </svg>
+</div>
+
+      </div>
+
+      <!-- Row 3 -->
+      <div class="hex-row">
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" /></div>
+        <div class="hex"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" /></div>
+      </div>
+
+      <!-- Row 4 -->
+      
+    </div>
+  </div>
+</section>
+
+
+  <!-- 💼 Experience Section -->
+  <section id="experience" class="exp-showcase">
+  <h2>Work Experience</h2>
+
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/koreai.jpg" alt="Kore.ai" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Conversational AI Developer Intern</h3>
+        <span class="exp-badge">Feb 2023 – July 2023</span>
+      </div>
+      <h4>Kore.ai • Hyderabad, India</h4>
+      <p>Built intelligent chatbots using Kore.ai NLP, collaborated with cross-functional teams to deliver production-grade conversation flows and analytics dashboards.</p>
+      <a href="certificates/koreAI.pdf" target="_blank" class="exp-letter-tag">📄 Experience Letter</a>
+    </div>
+  </div>
+
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/everest.png" alt="TeamEverestngo" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Content Writer</h3>
+        <span class="exp-badge">May 2021 – June 2021</span>
+      </div>
+      <h4>TeamEverestngo • Remote</h4>
+      <p>Designed and autho red remote learning curriculum for school-aged students. Contributed to digital volunteer education programs with lasting community impact.</p>
+      <a href="certificates/teameverestngo.pdf" target="_blank" class="exp-letter-tag">📄 Experience Letter</a>
+    </div>
+  </div>
+</section>
+
+  <!-- 🎓 Education Section -->
+  <section id="education" class="education-steps">
+  <h2>Education</h2>
+  <div class="edu-step-wrapper">
+
+    <!-- Step 1: Master's -->
+    <div class="edu-step">
+      <div class="edu-content-box">
+        <h3>MS in Data Science</h3>
+        <span class="edu-sub">University of New Haven, CT</span>
+        <p>Expected Dec 2025</p>
+        <p>Specialization in AI, Machine Learning, Big Data Engineering, and Advanced Analytics. Engaged in cloud-based projects and data-driven solutions.</p>
+      </div>
+    </div>
+
+    <!-- Step 2: Bachelor's -->
+    <div class="edu-step">
+      <div class="edu-content-box">
+        <h3>B.Tech in Information Technology</h3>
+        <span class="edu-sub">VBIT, Hyderabad</span>
+        <p>Graduated July 2023 | CGPA: 8.51 / 10</p>
+        <p>Built a strong foundation in programming, software development, databases, and machine learning fundamentals.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- 🛠️ Workshops Section -->
+
+<section id="workshops" class="exp-showcase">
+  <h2>Workshops & Certifications</h2>
+
+  <!-- ADAS -->
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/adas.png" alt="Skyrider Institution" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Advanced Driver Assistance System (ADAS)</h3>
+        <span class="exp-badge">Skyrider Institutions • July 2021</span>
+      </div>
+      <p>✔️ Gained insights into the architecture of ADAS in smart vehicles</p>
+      <p>✔️ Understood sensor fusion, obstacle detection, and adaptive cruise control</p>
+      <p>✔️ Explored real-world applications and safety enhancements using automation</p>
+      <a href="certificates/Skyrider(ADAS).pdf" target="_blank" class="exp-letter-tag">📄 View Certificate</a>
+    </div>
+  </div>
+
+  <!-- Process Mining -->
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/aicte.jpeg" alt="TCS iON" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Process Mining</h3>
+        <span class="exp-badge">AICTE Eduskills Foundation • September 2022</span>
+      </div>
+      <p>✔️ Understood process discovery and conformance checking techniques</p>
+      <p>✔️ Learned to analyze digital event logs to extract actionable insights</p>
+      <p>✔️ Applied mining tools to visualize and improve business workflows</p>
+      <a href="certificates/Process Mining.pdf" target="_blank" class="exp-letter-tag">📄 View Certificate</a>
+    </div>
+  </div>
+
+  <!-- Robotic Process Automation -->
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/aicte.jpeg" alt="TCS iON" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Robotic Process Automation (RPA)</h3>
+        <span class="exp-badge">AICTE Eduskills Foundation • May 2022</span>
+      </div>
+      <p>✔️ Learned how to automate repetitive tasks using RPA bots</p>
+      <p>✔️ Gained practical skills with UiPath tools and digital workflows</p>
+      <p>✔️ Focused on efficiency improvements in enterprise operations</p>
+      <a href="certificates/RPA.pdf" target="_blank" class="exp-letter-tag">📄 View Certificate</a>
+    </div>
+  </div>
+
+  <!-- AWS Cloud Foundations -->
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/aicte.jpeg" alt="AWS Academy" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>AWS Cloud Foundations</h3>
+        <span class="exp-badge">AICTE Eduskills Foundation(AWS Academy) • December 2021</span>
+      </div>
+      <p>✔️ Completed foundational cloud computing training using AWS</p>
+      <p>✔️ Explored storage, networking, and deployment services</p>
+      <p>✔️ Built scalable and secure cloud solutions using IAM and EC2</p>
+      <a href="certificates/aws.jpg" target="_blank" class="exp-letter-tag">📄 View Certificate</a>
+    </div>
+  </div>
+
+  <!-- Walmart Forage -->
+  <div class="exp-card-pro">
+    <div class="exp-icon">
+      <img src="images/forage.png" alt="Walmart Forage" />
+    </div>
+    <div class="exp-content">
+      <div class="exp-header">
+        <h3>Walmart Global Tech Virtual Experience</h3>
+        <span class="exp-badge">Forage • May 2022</span>
+      </div>
+      <p>✔️ Completed practical modules in Advanced Data Structures</p>
+      <p>✔️ Worked with real-world software architecture and RDBMS design</p>
+      <p>✔️ Gained experience in data munging and backend development</p>
+      <a href="certificates/walmart forage.pdf" target="_blank" class="exp-letter-tag">📄 View Certificate</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ✉️ Contact Section -->
+  <section id="contact" class="container">
+    <div style="text-align: center;">
+      <h2>Contact Me</h2>
+      <p>If you'd like to connect or collaborate, feel free to reach out:</p>
+      <p><strong>Email:</strong> chiliveruvedaprakash@gmail.com</p>
+      <p><strong>Phone:</strong> +1 (203) 654-5098</p>
+      <div style="margin-top: 20px;">
+        <a href="https://www.linkedin.com/in/chiliveru-veda-prakash-0551621aa/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/VedaPrakashChiliveru" target="_blank">GitHub</a>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-    <p>LinkedIn | GitHub | etc.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Your Name</p>
+  <!-- 🔻 Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Veda Prakash Chiliveru. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:chiliveruvedaprakash@gmail.com">Email</a> |
+        <a href="https://www.linkedin.com/in/chiliveru-veda-prakash-0551621aa/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/VedaPrakashChiliveru" target="_blank">GitHub</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- 🧠 Modal Logic -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+
+    window.addEventListener('click', function(e) {
+      document.querySelectorAll('.modal-overlay').forEach(modal => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
